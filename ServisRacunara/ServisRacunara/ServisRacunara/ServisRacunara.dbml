@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Servis" Class="ServisRacunaraDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=TOSHIBA\SQLEXPRESS;Initial Catalog=Servis;Integrated Security=True" SettingsObjectName="ServisRacunara.Properties.Settings" SettingsPropertyName="ServisConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dosije" Member="Dosijes">
+    <Type Name="Dosije">
+      <Column Name="ime" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="prezime" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="korisnickoIme" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sifra" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="osoba" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RacunVlasnika" Member="RacunVlasnikas">
+    <Type Name="RacunVlasnika">
+      <Column Name="sifraRacuna" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sifraNaloga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="radnik" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="vreme" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="imePrezime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="brLicne" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sifraRac" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="opisKva" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="spisPoslova" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="rezDel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="cenaUsluga" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cenaDelova" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cenaUkupna" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="RadNalog_RacunVlasnika" Member="RadNalog" ThisKey="sifraNaloga" OtherKey="sifraNaloga" Type="RadNalog" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RadNalog" Member="RadNalogs">
+    <Type Name="RadNalog">
+      <Column Name="sifraNaloga" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="radnik" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="vreme" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="imePrezime" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="brLicne" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="telefon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="adresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="mail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sifraRac" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="opisPro" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="opisKva" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="spisPoslova" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="rezDel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="RadNalog_RacunVlasnika" Member="RacunVlasnikas" ThisKey="sifraNaloga" OtherKey="sifraNaloga" Type="RacunVlasnika" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RezervniDeo" Member="RezervniDeos">
+    <Type Name="RezervniDeo">
+      <Column Name="barkod" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="marka" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="vrsta" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="model" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="kolicina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cena" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ZahtevServ" Member="ZahtevServs">
+    <Type Name="ZahtevServ">
+      <Column Name="brZahteva" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="serviser" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="datum" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tekst" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

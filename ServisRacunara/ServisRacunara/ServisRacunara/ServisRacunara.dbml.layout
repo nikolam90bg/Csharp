@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ServisRacunara">
+  <DataContextMoniker Name="/ServisRacunaraDataContext" />
+  <nestedChildShapes>
+    <classShape Id="17b6c80a-e1e5-4e46-aea6-b2ab63df91a2" absoluteBounds="0.75, 5.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/ServisRacunaraDataContext/Dosije" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b9b7d704-7626-4b99-a11e-e8fe20150d72" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c807e8f-89a5-4fee-bd94-11921a8282fa" absoluteBounds="3.5, 1, 2, 3.6939111328124992">
+      <DataClassMoniker Name="/ServisRacunaraDataContext/RacunVlasnika" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa91eabf-f52e-4d0a-9453-462ad0974b99" absoluteBounds="3.515, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="96e6dd30-14cf-4622-b1e4-263b5609dbd9" absoluteBounds="0.75, 1.125, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/ServisRacunaraDataContext/RadNalog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0d6af56c-f126-4f3a-b2d6-4c700d72f3b2" absoluteBounds="0.765, 1.585, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e713e97-7ba1-4d2e-8838-6475e91c9184" absoluteBounds="3.75, 5.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/ServisRacunaraDataContext/RezervniDeo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b2091d8b-54e3-47ff-9f31-5ad8667cda8a" absoluteBounds="3.765, 6.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6cc80063-e4b6-4a62-831c-367e5b21991f" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ServisRacunaraDataContext/ZahtevServ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="161c24a6-3c75-4cbe-974f-42fd6239e140" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.87580485026042); (3.5 : 2.87580485026042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ServisRacunaraDataContext/RadNalog/RadNalog_RacunVlasnika" />
+      <nodes>
+        <classShapeMoniker Id="96e6dd30-14cf-4622-b1e4-263b5609dbd9" />
+        <classShapeMoniker Id="9c807e8f-89a5-4fee-bd94-11921a8282fa" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

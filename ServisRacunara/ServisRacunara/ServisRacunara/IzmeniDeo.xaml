@@ -1,0 +1,48 @@
+﻿<Window x:Class="ServisRacunara.IzmeniDeo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServisRacunara"
+        mc:Ignorable="d"
+        Title="IZMENI DEO" Height="353" Width="225" ResizeMode="NoResize" Background="#FF8B8B8B">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Ubaci bar kod:" HorizontalAlignment="Left" Height="63" Margin="10,10,0,0" VerticalAlignment="Top" Width="192">
+            <Grid>
+                <TextBox x:Name="tb_barkod" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="86" Margin="0,10,0,0"/>
+                <Button x:Name="btn_trazi" Content="Trazi" HorizontalAlignment="Left" Margin="106,9,0,0" VerticalAlignment="Top" Width="69" Height="24" Click="btn_trazi_Click" FontWeight="Bold"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="Rezervni deo:" HorizontalAlignment="Left" Height="195" Margin="10,78,0,0" VerticalAlignment="Top" Width="192">
+            <Grid Margin="0,0,-2,0">
+                <Label x:Name="label" Content="Marka:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label x:Name="label_Copy" Content="Vrsta:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label x:Name="label_Copy1" Content="Kolicina:" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <Label x:Name="label_Copy2" Content="Cena:" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="tb_cena" HorizontalAlignment="Left" Height="26" Margin="81,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
+                <ComboBox x:Name="cb_vrsta" HorizontalAlignment="Left" Height="26" Margin="81,36,0,0" VerticalAlignment="Top" Width="91">
+                    <ComboBoxItem>procesor</ComboBoxItem>
+                    <ComboBoxItem>maticna</ComboBoxItem>
+                    <ComboBoxItem>graficka</ComboBoxItem>
+                    <ComboBoxItem>memorija</ComboBoxItem>
+                </ComboBox>
+                <ComboBox x:Name="cb_marka" HorizontalAlignment="Left" Height="26" Margin="81,5,0,0" VerticalAlignment="Top" Width="91">
+                    <ComboBoxItem>Intel</ComboBoxItem>
+                    <ComboBoxItem>Amd</ComboBoxItem>
+                    <ComboBoxItem>Msi</ComboBoxItem>
+                    <ComboBoxItem>Kingston</ComboBoxItem>
+                    <ComboBoxItem>Asus</ComboBoxItem>
+                </ComboBox>
+                <Label x:Name="label_Copy3" Content="Model:" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                <TextBox x:Name="tb_model" HorizontalAlignment="Left" Height="26" Margin="81,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
+                <TextBox x:Name="tb_kolicina" HorizontalAlignment="Left" Height="26" Margin="81,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="91"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btn_sacuvaj" Content="SACUVAJ" HorizontalAlignment="Left" Height="31" Margin="10,278,0,0" VerticalAlignment="Top" Width="192" Click="btn_sacuvaj_Click" FontWeight="Bold"/>
+
+
+
+
+
+    </Grid>
+</Window>

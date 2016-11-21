@@ -1,0 +1,85 @@
+﻿<Window x:Class="ServisRacunara.Racun2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServisRacunara"
+        mc:Ignorable="d"
+        Title="RACUN" Height="576" Width="680" Background="#FF8B8B8B" Loaded="Window_Loaded">
+    <Grid>
+        <Grid Margin="10,10,5,10">
+            <GroupBox x:Name="groupBox" Header="Serviser" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Height="351" Width="299">
+                <Grid Margin="0,0,0,-1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="389*"/>
+                        <ColumnDefinition Width="51*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="label11" Content="Opis kvara:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="label12" Content="Spisak poslova:" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RichTextBox x:Name="rtb_opisKvara" HorizontalAlignment="Left" Height="72" Margin="10,36,0,0" VerticalAlignment="Top" Width="244" Background="#FFE2E2E2" IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <RichTextBox x:Name="rtb_SpisakPoslova" HorizontalAlignment="Left" Height="69" Margin="10,143,0,0" VerticalAlignment="Top" Width="244" Background="#FFE2E2E2" IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                    <Label x:Name="label12_Copy" Content="Spisak rezervnih delova:" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <RichTextBox x:Name="rtb_SpisakRezDel" HorizontalAlignment="Left" Height="76" Margin="10,246,0,0" VerticalAlignment="Top" Width="244" Background="#FFE2E2E2" IsReadOnly="True">
+                        <FlowDocument>
+                            <Paragraph>
+                                <Run Text=""/>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="groupBox1" Header="Podaci:" HorizontalAlignment="Left" Height="54" Margin="10,10,0,0" VerticalAlignment="Top" Width="594">
+                <Grid Margin="0,0,-24,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="19*"/>
+                        <ColumnDefinition Width="134*"/>
+                        <ColumnDefinition Width="49*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="label" Content="Radnik:" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <TextBox x:Name="tb_imeRadnika" HorizontalAlignment="Left" Height="23" Margin="2,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="54" Grid.Column="1" IsReadOnly="True" Background="#FFE2E2E2"/>
+                    <Label x:Name="label1" Content="Vreme:" HorizontalAlignment="Left" Margin="71,0,0,0" VerticalAlignment="Top" Grid.Column="1" FontWeight="Bold"/>
+                    <TextBox x:Name="tb_vreme" HorizontalAlignment="Left" Height="23" Margin="121,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" Grid.Column="1" IsReadOnly="True" Background="#FFE2E2E2"/>
+                    <TextBox x:Name="tb_sifraRacuna" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="232,3,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="groupBox2" Header="Podaci o vlasniku racunara:" HorizontalAlignment="Left" Height="258" Margin="314,69,0,0" VerticalAlignment="Top"  Width="289">
+                <Grid Margin="2,0,-2,2">
+                    <Label x:Name="label3" Content="Ime i prezime:" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="label5" Content="Kontakt telefon:" HorizontalAlignment="Left" Margin="5,149,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="label6" Content="Mail:" HorizontalAlignment="Left" Margin="67,57,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="0.608,-0.771"/>
+                    <Label x:Name="label7" Content="Br. licne karte:" HorizontalAlignment="Left" Margin="15,102,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="label10" Content="Sifra racunara:" HorizontalAlignment="Left" Margin="14,194,0,0" VerticalAlignment="Top" FontWeight="Bold" RenderTransformOrigin="-1.486,3.428"/>
+                    <TextBox x:Name="tb_imePrezime" HorizontalAlignment="Left" Height="23" Margin="104,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Width="143" Background="#FFDEDCDC"/>
+                    <TextBox x:Name="tb_brLicne" HorizontalAlignment="Left" Height="23" Margin="105,105,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Width="90" Background="#FFDEDCDC"/>
+                    <TextBox x:Name="tb_telefon" HorizontalAlignment="Left" Height="24" Margin="106,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Width="89" Background="#FFDEDCDC"/>
+                    <TextBox x:Name="tb_mail" HorizontalAlignment="Left" Height="23" Margin="105,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Width="144" Background="#FFDEDCDC"/>
+                    <TextBox x:Name="tb_sifRacunara" HorizontalAlignment="Left" Height="22" Margin="106,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" IsReadOnly="True" Width="58" Background="#FFDEDCDC"/>
+
+                </Grid>
+            </GroupBox>
+            <TextBox x:Name="tb_ukupnaCena" HorizontalAlignment="Left" Height="29" Margin="119,425,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label9" Content="Ukupna cena:" HorizontalAlignment="Left" Margin="17,425,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+            <Button x:Name="button" Content="OBRISI" HorizontalAlignment="Left" Margin="10,470,0,0" VerticalAlignment="Top" Width="621" Height="50" FontWeight="Bold" FontSize="14" Click="button_Click" />
+            <Label x:Name="label4" Content="Cena usluga:" HorizontalAlignment="Left" Margin="314,332,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="tb_cenaUsluga" HorizontalAlignment="Left" Height="23" Margin="411,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label4_Copy" Content="Cena za delove:" HorizontalAlignment="Left" Margin="314,373,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <TextBox x:Name="tb_cenaDelova" HorizontalAlignment="Left" Height="23" Margin="411,376,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

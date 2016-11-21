@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1D99512-45EB-4C44-854F-87EB17C49634}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServisRacunara</RootNamespace>
+    <AssemblyName>ServisRacunara</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Deo.cs" />
+    <Compile Include="DodajRezDeo.xaml.cs">
+      <DependentUpon>DodajRezDeo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IzmeniDeo.xaml.cs">
+      <DependentUpon>IzmeniDeo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoviRacun.xaml.cs">
+      <DependentUpon>NoviRacun.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Racun2.xaml.cs">
+      <DependentUpon>Racun2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Racuni.xaml.cs">
+      <DependentUpon>Racuni.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Radnik.xaml.cs">
+      <DependentUpon>Radnik.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RadniNalog.xaml.cs">
+      <DependentUpon>RadniNalog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RNalog01.xaml.cs">
+      <DependentUpon>RNalog01.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RNalog02.xaml.cs">
+      <DependentUpon>RNalog02.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rnalozi.xaml.cs">
+      <DependentUpon>Rnalozi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rnalozi2.xaml.cs">
+      <DependentUpon>Rnalozi2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServisDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServisDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServisDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServisDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServisDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServisDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServisDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Serviser.xaml.cs">
+      <DependentUpon>Serviser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServisRacunara.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServisRacunara.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="TraziRezDeo.xaml.cs">
+      <DependentUpon>TraziRezDeo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zahtev.xaml.cs">
+      <DependentUpon>Zahtev.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zahtev2.xaml.cs">
+      <DependentUpon>Zahtev2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zahtevi.xaml.cs">
+      <DependentUpon>Zahtevi.xaml</DependentUpon>
+    </Compile>
+    <Page Include="DodajRezDeo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IzmeniDeo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="NoviRacun.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Racun2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Racuni.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Radnik.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadniNalog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RNalog01.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RNalog02.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rnalozi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rnalozi2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Serviser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TraziRezDeo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zahtev.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zahtev2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zahtevi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ServisDataSet.xsc">
+      <DependentUpon>ServisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServisDataSet.xss">
+      <DependentUpon>ServisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet1.xsc">
+      <DependentUpon>ServisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServisDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServisDataSet1.xss">
+      <DependentUpon>ServisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet2.xsc">
+      <DependentUpon>ServisDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServisDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServisDataSet2.xss">
+      <DependentUpon>ServisDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet3.xsc">
+      <DependentUpon>ServisDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ServisDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServisDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ServisDataSet3.xss">
+      <DependentUpon>ServisDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ServisRacunara.dbml.layout">
+      <DependentUpon>ServisRacunara.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="ServisRacunara.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ServisRacunara.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

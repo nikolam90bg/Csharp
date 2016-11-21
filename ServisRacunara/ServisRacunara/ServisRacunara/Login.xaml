@@ -1,0 +1,23 @@
+﻿<Window x:Class="ServisRacunara.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServisRacunara"
+        mc:Ignorable="d"
+        Title="PRIJAVA"  ResizeMode="NoResize"  Height="251" Width="279" Background="#FF8B8B8B" >
+    <Grid Margin="0,0,-6,2">
+        <Label x:Name="label" Content="Zaposlen:" HorizontalAlignment="Left" Margin="45,14,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label1" Content="Korisnicko ime:" HorizontalAlignment="Left" Margin="13,57,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label2" Content="Sifra:" HorizontalAlignment="Left" Margin="70,101,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="tb_korisnickoIme" HorizontalAlignment="Left" Height="26" Margin="119,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" RenderTransformOrigin="0.767,1.413"/>
+        <ComboBox x:Name="cb_osoba" HorizontalAlignment="Left" Height="26" Margin="119,14,0,0" VerticalAlignment="Top" Width="126">
+            <ComboBoxItem Content="radnik"/>
+            <ComboBoxItem Content="serviser"/>
+        </ComboBox>
+        <Button x:Name="btn_potvrdi" Content="PRIJAVI SE" HorizontalAlignment="Left" Margin="22,153,0,0" VerticalAlignment="Top" Width="91" Height="50" Click="btn_potvrdi_Click" FontWeight="Bold"/>
+        <Button x:Name="btn_odustani" Content="ODUSTANI" HorizontalAlignment="Left" Margin="154,153,0,0" VerticalAlignment="Top" Width="91" Height="50" Click="btn_odustani_Click" FontWeight="Bold"/>
+        <PasswordBox x:Name="tb_sifra" HorizontalAlignment="Left" Height="26" Margin="119,101,0,0" VerticalAlignment="Top" Width="126"/>
+
+    </Grid>
+</Window>
